@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: black;
+}
+.red{
+    color: red;
+}
+.gameCont{
+    position: absolute;
+    height: 100vh;
+    width: 1115px;
+    background: url(https://assets.entrepreneur.com/content/3x2/2000/1662439702-Sparkleadfinal.png);
+    overflow: hidden;
+    left: 0;
+    z-index: -2;
+}
+
+/* player space ship */
+#ship{
+    position: relative;
+    top: 82%;
+    left: 446px;
+    height: 121px;
+    width: 223px;
+    /* background-size: contain; */
+    /* background-color: red; */
+    animation: jerk 3s linear infinite;
+    text-align: center;
+}
+#bullet{
+    height: 18px;
+    width: 3px;
+    background-color: yellow;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    position: relative;
+    top: 57vh;
+    left: 554px;
+    z-index: -1;
+}
+.bulletAni{
+    animation: bulletAni 0.3s linear;
+    animation-iteration-count: 1;
+}
+@keyframes jerk{
+    0%{
+        top: 82%;
+    }
+    10%{
+        top: 80%;
+    }
+    30%{
+        top: 84%;
+    }
+    45%{
+        top: 81%;
+    }
+    60%{
+        top: 83%;
+    }
+    75%{
+        top: 82%;
+    }
+    100%{
+        top: 82%;
+    }
+}
+@keyframes bulletAni{
+    0%{
+        top: 57vh;
+    }
+    100%{
+        top: -35vh
+    }
+}
+
+
+/* random asteroid obstacles */
+#asteroid{
+    position: relative;
+    top: 0%;
+    left: 892px;
+    height: 121px;
+    width: 223px;
+    /* background-size: contain; */
+    /* background-color: yellow; */
+    /* animation: uptodown 5s linear infinite ; */
+    text-align: center;
+}
+.asteroidAni{
+    animation: uptodown 5s linear infinite ;
+}
+@keyframes uptodown{
+    0%{
+        top: -35vh;
+    }
+    100%{
+        top: 110vh;
+    }
+}
+
+/* RULES TAB */
+.rules{
+    color: white;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+.rules div{
+    margin-bottom: 8px;
+}
+
+/* GAME OVER */
+.gameOver{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    margin-bottom: 230px;
+    margin-right: 123px;
+    font-size: 2rem;
+}
+.btn{
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    margin-top: 12px;
+    width: 123px;
+    height: 33px;
+    margin-left: 42px;
+    cursor: pointer;
+}
